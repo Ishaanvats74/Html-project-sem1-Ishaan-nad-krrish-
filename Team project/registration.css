@@ -31,8 +31,9 @@ body{
 #text{
     padding-top:40px ;
     opacity: 80%;
-    color: white;
+    color: white; 
 }
+
 #create{
     font-size: 35px;
     padding-top: 10px;
@@ -146,4 +147,3 @@ button:hover{
     top: 105px;
     border-radius: 20px;
 }
-
