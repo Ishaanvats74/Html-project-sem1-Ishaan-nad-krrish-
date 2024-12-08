@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.navbar{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0%;
+    cursor: pointer;
+
+}
+
+.nav-list {
+    width: 800px;
+    height: 71px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    justify-content: center;
+    
+
+
+}
+
+.nav-list li {
+    list-style: none;
+    padding: 26px 30px;
+    
+}
+
+.nav-list li a {
+     text-decoration: none;
+     
+     
+
+}
+
+.nav-list li a:hover{
+    color: grey;
+}
+
+.rightNav {
+    width : 50%;
+    text-align: right;
+    justify-content: center;
+    background-color: black;
+    padding: 6px 23px;
+    text-decoration: aliceblue;
+    color: white;
+}
+
+#search{
+    padding: 5px;
+    font-size: 20px;
+    border: 5px solid gray;
+    border-radius: 9px;
+    text-emphasis-color: white;
+}
+
+.background{
+    
+    background-size: cover;
+    background-blend-mode: darken;
+    background: rgba(0,0,0,0,7);  
+    
+}
+
+#section{
+    background-image: url(/WhatsApp\ Image\ 2024-12-06\ at\ 22.01.30_ae7e3309.jpg);
+    background-size: cover;
+}
+.firstsection{
+    height: 100vh;
+    display: flex;
+
+
+
+}
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    height: 75%;
+    padding-top: 100px;
+   
+}
+
+.firsthalf{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+.secondhalf{
+    width: 30%;
+}
+
+.text-big{
+    font-size: 50px;
+    text-align: left;
+    
+}
+
+.text-small{
+    font-size: 20px;
+
+}
+
+.button{
+    text-decoration: none;
+}
+.btn{
+    padding: 8px 20px;
+    margin: 8px 3px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 20px;
+    background: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.btn:hover{
+    color:gray ;
+}
+
+.btn-sum{
+    padding: 6px 10px;
+    vertical-align: middle;
+
+}
+
+#logo{
+    height: 300px;
+    position: absolute;
+    padding-left: 1000px;
+
+}
