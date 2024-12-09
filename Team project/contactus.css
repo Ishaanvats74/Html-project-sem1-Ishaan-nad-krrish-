@@ -42,7 +42,6 @@
     color: black;
     cursor: pointer;
 }
-
 .rightNav{
     margin-left: 500px;
     margin-top: 13px;
@@ -77,56 +76,74 @@
     color: black;
     cursor: pointer;
 }
-.background{
-    background-size: cover;
-    background-blend-mode: darken;
-    background: rgba(0,0,0,0,7);  
+
+#center{
+    margin-left: 50px;
+    margin-top: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 700px;
+    box-shadow:  rgb(201, 198, 198) 0px 1px 20px;
+    border: none;
+
 }
 
-#section{
-    background-image: url(/6f10fa3a-d6f3-46e7-9017-13af3f4cf8fc.jpeg);
-    background-size: cover;
-    height: 100vh;
-}
-.firstsection{
-    display: flex;
-}
-.box-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 50%;
-    margin: auto;
-    height: 75%;
-    padding-top: 70px;
+#Contact{
+    font-size: 50px;
+    font-weight: bold;
 }
 
-.firsthalf{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+#find{
+    font-weight: bolder;
+    padding-top: 30px;
 }
-.btn{
+
+#type{
+    height: 20px;
+    width: 600px;
+    padding: 5px;
+    margin-top: 10px;    
+    border:1px solid rgb(187, 187, 187);
+    border-radius: 4px;
+}
+
+#links{
+    font-weight: bold;
+    margin-top: 25px;
+}
+.line{
+    color: black;
+}
+
+hr{
+    margin-bottom: 10px;
     margin-top: 10px;
 }
-.text-big{
-    font-size: 50px;
-    text-align: left;
+
+select{
+    margin-top: 50px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;   
+    padding-right: 10px;
+    opacity:0.6; 
+    background-color: white;
+    margin-left: 50px;
 }
 
-.text-small{
-    font-size: 20px;
+select:hover{
+    opacity: 100%;
 }
 
-.logo{
-    height: 300px;
-    position: absolute;
-    padding-left: 1000px;
+option{
+    color: black;
+    font-weight: bold;
 }
 
-.btn{
+
+footer{
+    background-image: linear-gradient(red,black);
+    height: 100px;
+    margin-top: 50px;
     
 }

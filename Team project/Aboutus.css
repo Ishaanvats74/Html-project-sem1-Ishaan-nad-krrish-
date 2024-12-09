@@ -42,7 +42,6 @@
     color: black;
     cursor: pointer;
 }
-
 .rightNav{
     margin-left: 500px;
     margin-top: 13px;
@@ -77,56 +76,46 @@
     color: black;
     cursor: pointer;
 }
-.background{
-    background-size: cover;
-    background-blend-mode: darken;
-    background: rgba(0,0,0,0,7);  
-}
-
-#section{
-    background-image: url(/6f10fa3a-d6f3-46e7-9017-13af3f4cf8fc.jpeg);
-    background-size: cover;
-    height: 100vh;
-}
-.firstsection{
-    display: flex;
+#name{
+    background-color: rgb(87, 84, 84);
+    height: 400px;   
 }
 .box-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 50%;
-    margin: auto;
     height: 75%;
     padding-top: 70px;
+    margin-left: 50px;
+    
 }
 
-.firsthalf{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.btn{
-    margin-top: 10px;
-}
 .text-big{
     font-size: 50px;
     text-align: left;
+    text-decoration: underline;
+    padding-bottom: 15px;
 }
 
 .text-small{
     font-size: 20px;
 }
-
-.logo{
-    height: 300px;
-    position: absolute;
-    padding-left: 1000px;
+#name2{
+    background-color: rgb(118, 122, 124);;
+    height: 400px;   
+}
+.nextslide{
+    margin-left: 80px;
+    color: white;
+}
+.start{
+    font-size: 50px;
+    margin-bottom: 15px;
 }
 
-.btn{
-    
+.a{
+    font-size: 20px;
+}
+li{
+    margin-bottom: 10px;
 }
