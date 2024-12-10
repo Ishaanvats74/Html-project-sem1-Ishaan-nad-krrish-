@@ -35,6 +35,7 @@
      padding: 12px;
      box-shadow:  rgb(201, 198, 198) 0px 1px 2px;
      color: white;
+     transition: all 0.5s ease-out;
 }
 
 .nav-list div a:hover{
@@ -43,7 +44,7 @@
     cursor: pointer;
 }
 .rightNav{
-    margin-left: 500px;
+    margin-left: 210px;
     margin-top: 13px;
     
     
@@ -69,6 +70,7 @@
      color: white;
      background-color: black;
      margin-left: 15px;
+     transition: all 0.5s ease-out;
 }
 
 .button:hover{
@@ -76,10 +78,20 @@
     color: black;
     cursor: pointer;
 }
-#name{
-    background-color: rgb(87, 84, 84);
-    height: 400px;   
+
+#background-image{
+    background-image: url(/691b8fe9f273e4342c90247373ebc2d9.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-attachment: fixed;
+    background-position: center;
 }
+#name{
+    padding-bottom: 50px;
+    height: 400px; 
+}
+
 .box-main{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -101,10 +113,50 @@
     font-size: 20px;
 }
 #name2{
-    background-color: rgb(118, 122, 124);;
-    height: 400px;   
+    margin-top: 20px;
+    height: 300px;   
 }
 .nextslide{
+    margin-left: 80px;
+    color: white;
+}
+.start{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.a{
+    font-size: 20px;
+}
+li{
+    margin-bottom: 10px;
+}
+
+#name3{
+    height: 300px; 
+
+    
+}
+.nextslide1{
+    margin-left: 80px;
+    color: white;
+}
+.start{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.a{
+    font-size: 20px;
+}
+li{
+    margin-bottom: 10px;
+}
+#name4{
+    height: 400px; 
+    
+}
+.nextslide2{
     margin-left: 80px;
     color: white;
 }

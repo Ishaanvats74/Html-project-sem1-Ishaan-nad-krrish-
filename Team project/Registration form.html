@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/Team project/registration.css">
+    <style>
+        
+    </style>
 </head>
 <body>
     <div id="center">
@@ -16,44 +19,85 @@
                         <p id="create">Create 
                             <br>
                             your account</p>
-                            <p id="Log">Already a member?<a href="">Log in</a></p> 
-                        </div>
-                        <div>
-                            <img src="/Team project/Health-.jpg" id="img">
-                        </div>
+                        <p id="Log">Already a member? <a href="">Log in</a></p> 
                     </div>
+                    <div>
+                        <img src="/Team project/Health-.jpg" id="img">
+                    </div>
+                </div>
                 <div>
                     <div id="username">
                         <div class="name">
                             <label for="firstname"><p>User Name:</p></label>
-                            <input type="text" name="first name" id="firstname">
+                            <input type="text" id="firstname">
+                            <p class="error" id="firstname-error"></p>
                         </div>
                         <div class="name">
                             <label for="lastname"><p>Last Name:</p></label>
-                            <input type="text" name="last name" id="lastname">
+                            <input type="text" id="lastname">
+                            <p class="error" id="lastname-error"></p>
                         </div>
                     </div>
                     <br>
                     <div id="emailborder">
                         <label for="email"><p>Email:</p></label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" id="email">
+                        <p class="error" id="email-error"></p>
                     </div>
                     <br>
                     <div id="passwordborder">
                         <label for="password"><p>Password:</p></label>
-                        <input type="password" name="password" id="password">
+                        <input type="password" id="password">
+                        <p class="error" id="password-error"></p>
                     </div>
                     <br>
                     <div>
-                        <button type="button">Create account</button>
-                        
+                        <button type="button" onclick="validateForm()">Create account</button>
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
+    <script>
+        function validateForm() {
+            // Clear previous error messages
+            document.getElementById("firstname-error").innerText = "";
+            document.getElementById("lastname-error").innerText = "";
+            document.getElementById("email-error").innerText = "";
+            document.getElementById("password-error").innerText = "";
 
+            // Get values from input fields
+            var firstname = document.getElementById("firstname").value.trim();
+            var lastname = document.getElementById("lastname").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var password = document.getElementById("password").value.trim();
+
+            // Flag to track if all fields are valid
+            let isValid = true;
+
+            // Check each input field and display specific error messages
+            if (firstname === "") {
+                document.getElementById("firstname-error").innerText = "User Name is required.";
+                isValid = false;
+            }
+            if (lastname === "") {
+                document.getElementById("lastname-error").innerText = "Last Name is required.";
+                isValid = false;
+            }
+            if (email === "") {
+                document.getElementById("email-error").innerText = "Email is required.";
+                isValid = false;
+            }
+            if (password === "") {
+                document.getElementById("password-error").innerText = "Password is required.";
+                isValid = false;
+            }
+
+            // Proceed to the next page if all fields are valid
+            if (isValid) {
+                window.location.href = "/Team project/data submitted.html";
+            }
+        }
+    </script>
 </body>
 </html>
-

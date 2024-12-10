@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalorieNinjas Food Information</title>
+    <link rel="stylesheet" href="/Team project/foodinformation.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-list">
+            <a href=""><img src="/WhatsApp Image 2024-12-01 at 18.54.02_6508f17e.jpg" id="profile"></a>
+            <div><a href="/Team project/index.html">Home</a></div> 
+            <div><a href="/Team project/Aboutus.html">About Us</a></div>
+            <div><a href="/Team project/product.html">Product</a></div>
+            <div><a href="/Team project/food.html">Food Information</a></div>  
+            <div><a href="/Team project/contactus.html">Contact Us</a></div>
+        </div>
+        <div class="rightNav">
+            <input type=" text" name="search" class="search">
+            <button class="button">Search</button>
+            <a href="/Team project/Registration form.html"><button class="button">Login</button></a>
+        </div>
+    </nav>
+<div id="body">
+    <div class="container">
+        <h1>Food Information</h1>
+        <form id="searchForm">
+            <input type="text" id="foodInput" placeholder="Enter food name" required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="foodInfo"></div>
+    </div>
+</div>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const foodName = document.getElementById('foodInput').value;
+    fetchFoodData(foodName);
+});
+
+async function fetchFoodData(foodName) {
+    try {
+        const response = await fetch(`https://api.calorieninjas.com/v1/nutrition?query=${foodName}`, {
+
+            headers: {
+                'X-Api-Key': '7zD4ag5gEsSn51LDYKsSMA==YZq254hwTOYILq2F' // Replace with your actual API key
+            }
+        });
+        const data = await response.json();
+        displayFoodData(data.items);
+    } catch (error) {
+        console.error('Error fetching food data:', error);
+    }
+}
+
+function displayFoodData(items) {
+    const foodInfoDiv = document.getElementById('foodInfo');
+    foodInfoDiv.innerHTML = '';
+    
+    if (items.length === 0) {
+        foodInfoDiv.innerHTML = '<p>No results found.</p>';
+        return;
+    }
+
+    items.forEach(item => {
+        const foodCard = document.createElement('div');
+        foodCard.className = 'food-card';
+        foodCard.innerHTML = `
+            <h2>${item.name}</h2>
+            <p><strong>Calories:</strong> ${item.calories} kcal</p>
+            <p><strong>Fat:</strong> ${item.fat_total_g} g</p>
+            <p><strong>Carbohydrates:</strong> ${item.carbohydrates_total_g} g</p>
+            <p><strong>Protein:</strong> ${item.protein_g} g</p>
+        `;
+        foodInfoDiv.appendChild(foodCard);
+    });
+}
+
+    </script>
+</body>
+</html>
